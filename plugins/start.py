@@ -52,7 +52,7 @@ async def start_command(client: Client, message: Message):
 
             if bool(CUSTOM_CAPTION) & bool(msg.document):
                 caption = CUSTOM_CAPTION.format(previouscaption = "" if not msg.caption else msg.caption.html, filename = msg.document.file_name)
-                bot.send_photo(chat_id=chat_id, photo='https://telegram.org/img/t_logo.png')
+
             else:
                 caption = "" if not msg.caption else msg.caption.html
 
