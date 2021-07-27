@@ -24,7 +24,6 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 ]
             )
         )
-        )
 
     elif data == "tutor":
         await query.message.edit_text(
