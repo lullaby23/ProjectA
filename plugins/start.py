@@ -94,11 +94,11 @@ async def start_command(client: Client, message: Message):
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
-    text = "<b>Hallo Sayang 👋 Kamu Harus Join Channel Dulu Ya Sayang ( づ￣ ³￣ )づ \nKalau Sudah Join Tekan Tulisan 🔒 Buka File Kemudian Start\n</b>"
+    text = "<b>Hallo Sayang 👋 Kamu Harus Join Channel Dulu Ya Sayang ( づ￣ ³￣ )づ \nKalau Sudah Join Tekan Tulisan 🔒 Buka File Kemudian tekan tombol Start\n</b>"
     message_text = message.text
     try:
         command, argument = message_text.split()
-        text = text + f" <b>🔒<a href='https://t.me/{client.username}?start={argument}'>coba lagi</a></b>"
+        text = text + f"\n\n <b>🔒<a href='https://t.me/{client.username}?start={argument}'>Buka File</a></b>"
     except ValueError:
         pass
     reply_markup = InlineKeyboardMarkup(
