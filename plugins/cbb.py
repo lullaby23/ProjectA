@@ -16,6 +16,10 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     [
                         InlineKeyboardButton("⚙️ Tutor ⚙️ ", callback_data = "tutor"),
                         InlineKeyboardButton("❌ Tutup ❌", callback_data = "close")
+                    ],
+                    [
+                        InlineKeyboardButton("⚙️ Tutor ⚙️ ", callback_data = "tutor"),
+                        InlineKeyboardButton("❌ Tutup ❌", callback_data = "close")
                     ]
                 ]
             )
@@ -23,7 +27,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 
     elif data == "tutor":
         await query.message.edit_text(
-            text = f"<b><code>Tutorial Pemakaian</code></b>\n\n<b>✔️ Jika Sudah Join Channel Atau Group</b>\nKalian Hanya Perlu Mendapatkan Link Dari Channel Atau Group Kemudian Tekan Tombol 'Start' Di Bot\n\n<b>❌ Jika Belum Join Channel Atau Group</b>\n Kalian Wajib Join Agar Video Dapat Di Akses\n\n Jika Video Tidak Muncul Hubungi <b><a href='tg://user?id={OWNER_ID}'>Owner Bot</a></b>",
+            text = f"<b>Tutorial Pemakaian</b>\n\n<b>✔️ Jika Sudah Join Channel Atau Group</b>\nKalian Hanya Perlu Mendapatkan Link Dari Channel Atau Group Kemudian Tekan Tombol 'Start' Di Bot\n\n<b>❌ Jika Belum Join Channel Atau Group</b>\n Kalian Wajib Join Agar Video Dapat Di Akses\n\n Jika Video Tidak Muncul Hubungi <b><a href='tg://user?id={OWNER_ID}'>Owner Bot</a></b>",
           disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
@@ -33,6 +37,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     ]
                 ]
             )
+            
         )
         
     elif data == "close":
