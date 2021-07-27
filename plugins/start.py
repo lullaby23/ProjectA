@@ -73,8 +73,8 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("😊 Tentang Bot ", callback_data = "about"),
-                    InlineKeyboardButton("❌ Tutup ", callback_data = "close")
+                    InlineKeyboardButton("🤖 Tentang Bot 🤖", callback_data = "about"),
+                    InlineKeyboardButton("❌ Tutup ❌", callback_data = "close")
                 ]
             ]
         )
