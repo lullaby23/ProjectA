@@ -73,8 +73,8 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("😊 About Bot", callback_data = "about"),
-                    InlineKeyboardButton("🔒 Close", callback_data = "close")
+                    InlineKeyboardButton("😊 Cara Pakai Bot ", callback_data = "about"),
+                    InlineKeyboardButton("🔒 Tutup ", callback_data = "close")
                 ]
             ]
         )
@@ -98,10 +98,17 @@ async def not_joined(client: Client, message: Message):
     message_text = message.text
     try:
         command, argument = message_text.split()
-        text = text + f" <b>lalu <a href='https://t.me/{client.username}?start={argument}'>coba lagi</a></b>"
+        text = text + f" <b>lalu coba lagi</b>"
     except ValueError:
         pass
-    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Join Channel 🔑", url = client.invitelink)]])
+    reply_markup = InlineKeyboardMarkup(
+     [
+                [
+                    InlineKeyboardButton("Join Channel 🔑", url = client.invitelink),
+                    InlineKeyboardButton("🔒 Buka File ", url=f'https://t.me/{client.username}?start={argument}')
+                ]
+            ]
+        )
     await message.reply(
         text = text,
         reply_markup = reply_markup,
