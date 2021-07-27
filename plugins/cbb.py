@@ -19,13 +19,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 ]
             )
         )
-    elif data == "close":
-        await query.message.delete()
-        try:
-            await query.message.reply_to_message.delete()
-        except:
-            pass
-        
+                
     if data == "tutor":
         await query.message.edit_text(
             text = f"<b>○ Contact Person : 📞<a href='tg://user?id={OWNER_ID}'>Click Here</a></b>",
@@ -38,10 +32,10 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 ]
             )
         )
-         elif data == "tutup":
+        
+    elif data == "close":
         await query.message.delete()
         try:
             await query.message.reply_to_message.delete()
         except:
             pass
-        
