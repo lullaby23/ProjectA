@@ -94,20 +94,21 @@ async def start_command(client: Client, message: Message):
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
-    text = "<b>Hai {client.username} Kamu Harus Join Channel Dulu \nBaru bisa akses video</b>"
+    text = "<b>Hai {client.username} Kamu Harus Join Channel Dulu Ya Sayang ( づ￣ ³￣ )づ \nKalau Sudah Join Tekan Tulisan 🔒 Buka File Kemudian Start\n</b>"
     message_text = message.text
     try:
         command, argument = message_text.split()
-        text = text + f" <b>lalu Tekan Buka File</b>"
+  text = text + f" <b><a href='https://t.me/{client.username}?start={argument}'>🔒 Buka File</a></b>"
     except ValueError:
         pass
     reply_markup = InlineKeyboardMarkup(
      [
                 [
                     InlineKeyboardButton("Join Channel 🔑", url = client.invitelink),
-                    InlineKeyboardButton("🔒 Buka File ", url= a href='https://t.me/{client.username}?start={argument}')
+                    InlineKeyboardButton("😊 About Bot", callback_data = "about")
                 ]
             ]
+        InlineKeyboardMarkup([[InlineKeyboardButton("Join Channel 🔑", url = client.invitelink)]])
         )
     await message.reply(
         text = text,
