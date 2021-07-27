@@ -77,7 +77,7 @@ async def start_command(client: Client, message: Message):
                     InlineKeyboardButton("🔒 Tutup ", callback_data = "close")
                 ]
             ]
-            else:
+            elif:
         reply_markup = InlineKeyboardMarkup(
             [
                 [
