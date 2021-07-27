@@ -22,7 +22,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 
     if data == "tutor":
         await query.message.edit_text(
-            text = f"<b>○ Contact Person : 📞<a href='tg://user?id={OWNER_ID}'>Click Here</a></b>",
+            text = f"<b>Tutor</b>",
           disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
