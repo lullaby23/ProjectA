@@ -26,11 +26,6 @@ async def cb_handler(client: Bot, query: CallbackQuery):
         except:
             pass
         
-        
-
-        @Bot.on_callback_query()
-async def cb_handler(client: Bot, query: CallbackQuery):
-    data = query.data
     if data == "tutor":
         await query.message.edit_text(
             text = f"<b>○ Contact Person : 📞<a href='tg://user?id={OWNER_ID}'>Click Here</a></b>",
