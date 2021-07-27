@@ -73,8 +73,8 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("😊 Cara Pakai Bot ", callback_data = "about"),
-                    InlineKeyboardButton("🔒 Tutup ", callback_data = "close")
+                    InlineKeyboardButton("😊 Tentang Bot ", callback_data = "about"),
+                    InlineKeyboardButton("❌ Tutup ", callback_data = "close")
                 ]
             ]
         )
@@ -94,18 +94,18 @@ async def start_command(client: Client, message: Message):
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
-    text = "<b>Hallo Sayang 👋 Kamu Harus Join Channel Dulu Ya Sayang ( づ￣ ³￣ )づ \nKalau Sudah Join Tekan Tulisan 🔒 Buka File Kemudian tekan tombol Start\n</b>"
+    text = "<b>Hallo Sayang 👋</b> Kamu Harus Join Channel Atau Group Dulu Ya Sayang ( づ￣ ³￣ )づ \nKalau Sudah Join Tekan Tulisan 🔒 Buka File 🔒 Kemudian tekan tombol Start\n"
     message_text = message.text
     try:
         command, argument = message_text.split()
-        text = text + f"\n\n <b>🔒<a href='https://t.me/{client.username}?start={argument}'>Buka File</a></b>"
+        text = text + f"\n\n <b>🔒 <a href='https://t.me/{client.username}?start={argument}'>Buka File</a> 🔒</b>"
     except ValueError:
         pass
     reply_markup = InlineKeyboardMarkup(
      [
                 [
-                    InlineKeyboardButton("Join Channel 🔑", url = client.invitelink),
-                    InlineKeyboardButton("⚙️ Cara Pakai Bot", callback_data = "tutor")
+                    InlineKeyboardButton("🔑 Join Channel 🔑", url = client.invitelink),
+                    InlineKeyboardButton("⚙️ Cara Pakai Bot ⚙️", callback_data = "tutor")
                  ]
             ]
         )
