@@ -105,7 +105,7 @@ async def not_joined(client: Client, message: Message):
      [
                 [
                     InlineKeyboardButton("Join Channel 🔑", url = client.invitelink),
-                    InlineKeyboardButton("😊 Cara Pakai Bot", url = callback_data.about)
+                    InlineKeyboardButton("😊 Cara Pakai Bot", callback_data = "about")
                  ]
             ]
         )
