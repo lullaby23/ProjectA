@@ -76,10 +76,14 @@ async def start_command(client: Client, message: Message):
                     InlineKeyboardButton("😊 Cara Pakai Bot ", callback_data = "about"),
                     InlineKeyboardButton("🔒 Tutup ", callback_data = "close")
                 ]
-            ],
+            ]
+            else:
+        reply_markup = InlineKeyboardMarkup(
             [
-                        InlineKeyboardButton("🔒 Cara Pakai", callback_data = "tutor")
-                    ]
+                [
+                    InlineKeyboardButton("😊 Cara Pakai Bot ", callback_data = "tutor")
+                ]
+            ]
         )
         await message.reply_text(
             text = START_MSG.format(
