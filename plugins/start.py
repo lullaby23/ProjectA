@@ -94,7 +94,7 @@ async def start_command(client: Client, message: Message):
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
-    text = "<b>Hallo [{}](tg://user?id={})! 👋</b> Kamu Harus Join Channel Atau Group Dulu Ya Sayang ( づ￣ ³￣ )づ \nKalau Sudah Join Tekan Tulisan 🔒 Buka File 🔒 Kemudian tekan tombol Start\n"
+    text = "<b>Hallo [{}](tg://user?id={}) 👋</b> Kamu Harus Join Channel Atau Group Dulu Ya Sayang ( づ￣ ³￣ )づ \nKalau Sudah Join Tekan Tulisan 🔒 Buka File 🔒 Kemudian tekan tombol Start\n"
     message_text = message.text
     try:
         command, argument = message_text.split()
