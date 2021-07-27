@@ -20,7 +20,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             )
         )
                 
-    if data == "tutor":
+    elif data == "tutor":
         await query.message.edit_text(
             text = f"<b>Tutor</b>",
           disable_web_page_preview = True,
@@ -33,7 +33,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             )
         )
         
-    elif data == "close":
+    else data == "close":
         await query.message.delete()
         try:
             await query.message.reply_to_message.delete()
