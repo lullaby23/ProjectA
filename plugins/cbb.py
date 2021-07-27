@@ -11,6 +11,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
         await query.message.edit_text(
             text = f"📚 Bahasa pemrograman : <b><code>Python3</code></b>\n📝 Contact Person : <b><a href='tg://user?id={OWNER_ID}'>Owner Bot</a></b>\n🦸 Creator <b><a href='t.me/lullaby330'>Lullaby</a></b>\nBot Ini Dibuat Dengan ❤️ Selamat menikmati 🤙",
           disable_web_page_preview = True,
+                            bot.send_photo(chat_id=chat_id, photo='https://telegram.org/img/t_logo.png'),
             reply_markup = InlineKeyboardMarkup(
                 [
                     [
