@@ -15,10 +15,9 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 [
                     [
                         InlineKeyboardButton("⚙️ Tutor ⚙️ ", callback_data = "tutor"),
-                        InlineKeyboardButton("❌ Tutup ❌", callback_data = "close")
+                        InlineKeyboardButton("🦸 Pesan Bot 🦸", url="t.me/fybadmin")
                     ],
                     [
-                        InlineKeyboardButton("⚙️ Tutor ⚙️ ", callback_data = "tutor"),
                         InlineKeyboardButton("❌ Tutup ❌", callback_data = "close")
                     ]
                 ]
